@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [ghns-discuss] Where to start?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ghns-discuss/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:ghns-discuss%40lists.berlios.de?Subject=Re%3A%20%5Bghns-discuss%5D%20Where%20to%20start%3F&In-Reply-To=%3C1118608442.10287.19.camel%40localhost%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000003.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[ghns-discuss] Where to start?</H1>
+    <B>Michael Gebhart</B> 
+    <A HREF="mailto:ghns-discuss%40lists.berlios.de?Subject=Re%3A%20%5Bghns-discuss%5D%20Where%20to%20start%3F&In-Reply-To=%3C1118608442.10287.19.camel%40localhost%3E"
+       TITLE="[ghns-discuss] Where to start?">lists at miketech.net
+       </A><BR>
+    <I>Sun Jun 12 22:34:02 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000003.html">[ghns-discuss] Where to start?
+</A></li>
+        <LI>Next message: <A HREF="000005.html">[ghns-discuss] Updated DTD
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+&gt;<i> 
+</I>&gt;<i> I planned to have some shell scripts in the end but only to see that it works 
+</I>&gt;<i> and to make some power users happy :-)
+</I>&gt;<i> It is true that each implementation expects an own installation location. Even 
+</I>&gt;<i> in some cases where it is stupid, e.g. the wallpaper, such an intrinsic piece 
+</I>&gt;<i> of data, and yet so difficult to manage.
+</I>&gt;<i> So the above is not high priority I'd say.
+</I>
+Sometimes it is not only done by copying the data to the target
+location. For example the GNOME wallpapers has to be added in a xml
+file. The scripts should also be able to do this.
+
+&gt;<i> I also think that with SOAP it's possible to reduce traffic by only getting 
+</I>&gt;<i> the data one really needs. The art.gnome.org XML file is &gt; 6000 lines long.
+</I>
+Yeah right. This is also an important fact. 
+
+&gt;<i> So there would be a start for WSDL messages already:
+</I>&gt;<i> * AuthenticationRequest
+</I>&gt;<i> * ListRequest
+</I>&gt;<i> * DownloadRequest
+</I>&gt;<i> * Comment or RateRequest
+</I>&gt;<i> ... and the answers to all of these.
+</I>
+Right. It is also possible to use the HTTP Authentication I heard. But I
+am not sure, if this is the right way for authentication.
+
+&gt;<i> I also had a few ideas. One is that I read about volatile.debian.net and how 
+</I>&gt;<i> they keep e.g. spamassassin signatures up to date. This is not exactly a 
+</I>&gt;<i> desktop topic but who knows what kind of data might be next.
+</I>
+Maybe we need signatures for our desktop data too. E.g. some data (gtk
+theme engines) need to be compiled. Eventually we also have other kind
+of data that could need a signature to be sure, that the data is checked
+and secure. 
+
+&gt;<i> The second is just a small improvement over what is currently used:
+</I>&gt;<i> In addition to the &quot;category&quot; entry (or &quot;type&quot; in our case), a i18n'd human 
+</I>&gt;<i> readable string should be introduced. For instance, where it now reads 
+</I>&gt;<i> &quot;freeciv/level&quot;, it would then say &quot;Freeciv levels&quot;. The 
+</I>&gt;<i> &quot;kdeedu/vocabularies&quot; category would be &quot;Vocabulary files&quot;. And so on.
+</I>
+yeah this is nice. But why in addition to the category? Do we need both?
+The type freeciv/level etc. should be enough to describe the category.
+
+Greetings
+
+Mike
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000003.html">[ghns-discuss] Where to start?
+</A></li>
+	<LI>Next message: <A HREF="000005.html">[ghns-discuss] Updated DTD
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ghns-discuss">More information about the ghns-discuss
+mailing list</a><br>
+</body></html>

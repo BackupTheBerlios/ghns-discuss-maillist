@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [ghns-discuss] Where to start?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ghns-discuss/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:ghns-discuss%40lists.berlios.de?Subject=Re%3A%20%5Bghns-discuss%5D%20Where%20to%20start%3F&In-Reply-To=%3C200506102242.55847.spillner%40kde.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000002.html">
+   <LINK REL="Next"  HREF="000004.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[ghns-discuss] Where to start?</H1>
+    <B>Josef Spillner</B> 
+    <A HREF="mailto:ghns-discuss%40lists.berlios.de?Subject=Re%3A%20%5Bghns-discuss%5D%20Where%20to%20start%3F&In-Reply-To=%3C200506102242.55847.spillner%40kde.org%3E"
+       TITLE="[ghns-discuss] Where to start?">spillner at kde.org
+       </A><BR>
+    <I>Fri Jun 10 22:42:54 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000002.html">[ghns-discuss] Where to start?
+</A></li>
+        <LI>Next message: <A HREF="000004.html">[ghns-discuss] Where to start?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Am Donnerstag, 9. Juni 2005 12:11 schrieb Michael Gebhart:
+&gt;<i> Well, the first thing we need is a list of the different stuff and a
+</I>&gt;<i> description how it has to be installed. So every implementation of GHNS
+</I>&gt;<i> can take a look on it and see, what kind of stuff can be downloaded and
+</I>&gt;<i> write its own installation procedure. Or did you plan to write some
+</I>&gt;<i> basic console scripts to install stuff and that the clients only use
+</I>&gt;<i> these scripts?
+</I>
+I planned to have some shell scripts in the end but only to see that it works 
+and to make some power users happy :-)
+It is true that each implementation expects an own installation location. Even 
+in some cases where it is stupid, e.g. the wallpaper, such an intrinsic piece 
+of data, and yet so difficult to manage.
+So the above is not high priority I'd say.
+
+&gt;<i> - wallpaper-specific options (resolution) -&gt; generic options
+</I>&gt;<i>
+</I>&gt;<i> With DXS you simply can get a whole datastructure with a list of
+</I>&gt;<i> wallpaper specific options.
+</I>
+OK.
+
+&gt;<i> - maybe differential downloads or separate lists for most popular/most
+</I>&gt;<i> downloaded/latest
+</I>&gt;<i>
+</I>&gt;<i> Yeah. Especially with SOAP we can have functions like:
+</I>&gt;<i> get_most_popular_theme(start, end) which returns the most popular
+</I>&gt;<i> themes, beginning from start to end. Or similar to this:
+</I>&gt;<i> get_most_downloaded_theme. Or we simply have functions like:
+</I>&gt;<i> get_theme(start, end, sort). So the client has the possibilty to get all
+</I>&gt;<i> the themes, it wants to display.
+</I>
+I also think that with SOAP it's possible to reduce traffic by only getting 
+the data one really needs. The art.gnome.org XML file is &gt; 6000 lines long.
+
+&gt;<i> - maybe a way to browse all creative works from an author
+</I>&gt;<i>
+</I>&gt;<i> Yup. I also have some points:
+</I>&gt;<i>
+</I>&gt;<i> - user registration (if allowed by the administrator)
+</I>&gt;<i>
+</I>&gt;<i> The client should be able to register some new user accounts for writing
+</I>&gt;<i> comments, or uploading stuff.
+</I>&gt;<i>
+</I>&gt;<i> - read/write comments
+</I>&gt;<i>
+</I>&gt;<i> A user should be able to read and write comments on the client side. A
+</I>&gt;<i> registration should be required.
+</I>
+So there would be a start for WSDL messages already:
+* AuthenticationRequest
+* ListRequest
+* DownloadRequest
+* Comment or RateRequest
+... and the answers to all of these.
+
+I also had a few ideas. One is that I read about volatile.debian.net and how 
+they keep e.g. spamassassin signatures up to date. This is not exactly a 
+desktop topic but who knows what kind of data might be next.
+
+The second is just a small improvement over what is currently used:
+In addition to the &quot;category&quot; entry (or &quot;type&quot; in our case), a i18n'd human 
+readable string should be introduced. For instance, where it now reads 
+&quot;freeciv/level&quot;, it would then say &quot;Freeciv levels&quot;. The 
+&quot;kdeedu/vocabularies&quot; category would be &quot;Vocabulary files&quot;. And so on.
+
+Josef
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000002.html">[ghns-discuss] Where to start?
+</A></li>
+	<LI>Next message: <A HREF="000004.html">[ghns-discuss] Where to start?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ghns-discuss">More information about the ghns-discuss
+mailing list</a><br>
+</body></html>

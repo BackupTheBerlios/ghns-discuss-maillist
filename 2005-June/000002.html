@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [ghns-discuss] Where to start?
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/ghns-discuss/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:ghns-discuss%40lists.berlios.de?Subject=Re%3A%20%5Bghns-discuss%5D%20Where%20to%20start%3F&In-Reply-To=%3C1118311882.25344.63.camel%40localhost%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000001.html">
+   <LINK REL="Next"  HREF="000003.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[ghns-discuss] Where to start?</H1>
+    <B>Michael Gebhart</B> 
+    <A HREF="mailto:ghns-discuss%40lists.berlios.de?Subject=Re%3A%20%5Bghns-discuss%5D%20Where%20to%20start%3F&In-Reply-To=%3C1118311882.25344.63.camel%40localhost%3E"
+       TITLE="[ghns-discuss] Where to start?">lists at miketech.net
+       </A><BR>
+    <I>Thu Jun  9 12:11:22 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000001.html">[ghns-discuss] Where to start?
+</A></li>
+        <LI>Next message: <A HREF="000003.html">[ghns-discuss] Where to start?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+first thanks to josef for this mailinglist! Ok, let&#180;s go:
+
+- the Desktop Exchange Service (DXS) would need a WSDL which specifies
+which 
+parameters it expects for uploads, downloads and other actions (voting
+could 
+be handled too by it couldn't it?)
+
+The DXS should be a kind of interface between the client and the server.
+With SOAP the client has the possibility to access all functions and
+data of the providing webpage. 
+
+So: The client can access specific themes, or simply can send requests
+for votes, user registration, user queries and so on. With this
+interface the client becomes a complete frontend for the whole webpage.
+With the required authentication it should be also possible to send
+votes, or write comments.
+
+
+- common client-side actions, like post-installation scripts,
+decompression, 
+signature verification and &quot;fake installations&quot; (that is, if a distro
+package 
+is upgraded, the download dialog should be able to know if an item has
+been 
+installed already)
+
+Well, the first thing we need is a list of the different stuff and a
+description how it has to be installed. So every implementation of GHNS
+can take a look on it and see, what kind of stuff can be downloaded and
+write its own installation procedure. Or did you plan to write some
+basic console scripts to install stuff and that the clients only use
+these scripts?
+
+And one point: GHNS isn&#180;t only for GNOME, or only for KDE. So: when
+providing installation instructions, or writing an implementation for
+more than one desktop environment, we should also provide installation
+information for the different desktop environments: 
+For example: Wallpapers on KDE are installed differently to GNOME or
+XFCE wallpapers. We shouldn&#180;t forget about this.
+
+
+- wallpaper-specific options (resolution) -&gt; generic options
+
+With DXS you simply can get a whole datastructure with a list of
+wallpaper specific options.
+
+- maybe differential downloads or separate lists for most popular/most 
+downloaded/latest
+
+Yeah. Especially with SOAP we can have functions like:
+get_most_popular_theme(start, end) which returns the most popular
+themes, beginning from start to end. Or similar to this:
+get_most_downloaded_theme. Or we simply have functions like:
+get_theme(start, end, sort). So the client has the possibilty to get all
+the themes, it wants to display.
+
+- maybe a way to browse all creative works from an author
+
+Yup. I also have some points:
+
+- user registration (if allowed by the administrator)
+
+The client should be able to register some new user accounts for writing
+comments, or uploading stuff. 
+
+- read/write comments
+
+A user should be able to read and write comments on the client side. A
+registration should be required.
+
+
+
+Greetings
+
+Mike
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000001.html">[ghns-discuss] Where to start?
+</A></li>
+	<LI>Next message: <A HREF="000003.html">[ghns-discuss] Where to start?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/ghns-discuss">More information about the ghns-discuss
+mailing list</a><br>
+</body></html>
